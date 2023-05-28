@@ -1,12 +1,12 @@
 // deno-lint-ignore-file no-explicit-any
 
-// DenortCore Version: v0.4.0
+// DenortCore Version: v0.4.2
 
 declare namespace Android {
-    class Point {
+    export class Point {
         static from(point: Point): Point;
 
-        constructor(x: number, y: number, c: number);
+        constructor(x?: number, y?: number, c?: number);
 
         x: number;
 
@@ -18,7 +18,7 @@ declare namespace Android {
     class Rect {
         static from(rect: Rect): Rect;
 
-        constructor(left: number, top: number, right: number, bottom: number);
+        constructor(left?: number, top?: number, right?: number, bottom?: number);
 
         left: number;
 
@@ -375,6 +375,16 @@ declare namespace Android {
     }
 
     namespace img {
+        class Image {
+            recycle(): void;
+
+            getWidth(): Promise<number>;
+
+            getHeight(): Promise<number>;
+
+            getColor(x: number, y: number): Promise<number>;
+        }
+
         class CompareColorOptions {
             constructor(threshold?: number);
         }
@@ -383,11 +393,11 @@ declare namespace Android {
             constructor(threshold?: number, rect?: Rect);
         }
 
-        function refresh(): Promise<number>;
+        function refresh(): Promise<Image>;
 
-        function refreshManually(): Promise<number>;
+        function refreshManually(): Promise<Image>;
 
-        function getImage(): number;
+        function getImage(): Image;
 
         function lock(): void;
 
