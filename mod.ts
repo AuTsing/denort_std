@@ -1,3 +1,4 @@
+/// <reference types="./types.d.ts" />
 export const Point = Android.Point;
 export const Rect = Android.Rect;
 export const UiObject = Android.UiObject;
