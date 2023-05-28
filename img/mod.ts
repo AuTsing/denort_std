@@ -1,3 +1,5 @@
+/// <reference types="../types.d.ts" />
+
 export const CompareColorOptions = Android.img.CompareColorOptions;
 export const FindColorOptions = Android.img.FindColorOptions;
 

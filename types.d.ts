@@ -3,7 +3,8 @@
 // DenortCore Version: v0.4.2
 
 declare namespace Android {
-    export class Point {
+    /** 点类 */
+    class Point {
         static from(point: Point): Point;
 
         constructor(x?: number, y?: number, c?: number);
@@ -15,6 +16,7 @@ declare namespace Android {
         c: number;
     }
 
+    /** 矩形类 */
     class Rect {
         static from(rect: Rect): Rect;
 
@@ -29,12 +31,20 @@ declare namespace Android {
         bottom: number;
     }
 
-    /** 该模块提供对安卓设备的输入输出操作。 */
+    /**
+     * 提供对安卓设备的输入输出操作。
+     *
+     * @module
+     */
     namespace io {
         /** 在屏幕输出 Toast 信息。 */
         function toast(...args: any[]): void;
 
-        /** 日志对象，可以在应用的日志屏幕输出日志。 */
+        /**
+         * 提供在应用的日志屏幕输出日志。
+         *
+         * @module
+         */
         namespace log {
             /** 输出级别为 `VERBOSE` 的日志。 */
             function verbose(...args: any[]): void;
@@ -102,6 +112,7 @@ declare namespace Android {
         }
     }
 
+    /** Ui 对象类 */
     class UiObject {
         getParent(): UiObject | null;
 
@@ -358,6 +369,7 @@ declare namespace Android {
         build(): UiSelector;
     }
 
+    /** Ui 选择器类 */
     class UiSelector {
         static builder(): UiSelectorBuilder;
 

@@ -1,3 +1,5 @@
+/// <reference types="../types.d.ts" />
+
 export const verbose = Android.io.log.verbose;
 export const debug = Android.io.log.debug;
 export const info = Android.io.log.info;

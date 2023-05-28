@@ -1,3 +1,5 @@
+/// <reference types="../../types.d.ts" />
+
 export const click = Android.finger.accessibility.click;
 export const press = Android.finger.accessibility.press;
 export const swipe = Android.finger.accessibility.swipe;
